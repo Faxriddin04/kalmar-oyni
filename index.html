@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="bannrer">
+        <header class="header">
+            <div class="toggle"></div>
+            <a href="#" class="logo"><img src="./images/logo.png" alt="" width="150px" ></a>
+        </header>
+        <div class="content">
+            <img src="../logo2.png" alt="" class="textimg">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam excepturi amet incidunt perferendis deserunt aliquid nostrum ipsam exercitationem laudantium, laboriosam aut nulla, inventore earum blanditiis fuga, officia rem quibusdam similique?
+            </p>
+            <a href="#" class="btn"><ion-icon name="play-outline"></ion-icon>Watch Trailer</a>
+        </div>
+        <div class="clip">
+            <div class="clipBox">
+                <img src="./images/img2.jpg" alt="" class="clipimg">
+                <ion-icon name="play-circle-outline"></ion-icon>
+            </div>
+            <div class="clipBox">
+                <img src="./images/img3.png" alt="" class="clipimg">
+                <ion-icon name="play-circle-outline"></ion-icon>
+            </div>
+        </div>
+    </section>
+    <ul class="navigation">
+        <li class="nav-item">
+            <a href="" class="link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="link">Cast</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="link">Shop</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="link">Contact</a>
+        </li>
+    </ul>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+    </script>
+</body>
+</html>

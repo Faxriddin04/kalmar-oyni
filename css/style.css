@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.bannrer
+{
+    background-image:url('../images/br.jpeg'), linear-gradient( #0044ff,#333) ;
+    min-height: 100vh;
+    /* background: #120e0f linear-gradient(#555) url('../images/br.jpeg') ; */
+    background-position: center;
+    background-size: cover;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+}
+.header
+{
+    position: absolute;
+    top: 40px;
+    display: flex;align-items: center;
+}
+.toggle
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle::before
+{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: #120e0f;
+    transform: translateY(-6px);
+    transition: 0.5s;
+}
+.toggle.active::before
+{
+    transform: translateY(0) rotate(45deg);
+
+}
+.toggle::after
+{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: #120e0f;
+    transform: translateY(6px);
+    transition: 0.5s;
+}
+.toggle.active::after
+{
+    transform: translateY(0) rotate(-45deg);
+
+}
+.navigation
+{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #241c1e url('../images/header-img.jpg');
+    background-position: right;
+    background-size: cover;
+    display: none;
+    padding-right: 100px;
+}
+.navigation.active
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.navigation .nav-item
+{
+    list-style: none;
+    margin: 4px 0;
+}
+.navigation .nav-item .link
+{
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.navigation .nav-item .link:hover
+{
+    color: #e83c80;
+}
+.content
+{
+    position: relative;
+    max-width: 500px;
+}
+.content .textimg
+{
+    max-width: 600px;
+    width: 100%;
+}
+.content p
+{
+ color: #fff;
+ font-size: 1.3em;
+ line-height: 1.75em;
+ font-weight: 300;
+}
+.btn
+{
+    position: relative;
+    background: #e83c80;
+    color: #fff;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.btn:hover
+{
+    background: #e83c68;
+}
+.btn ion-icon
+{
+    margin-right: 5px;
+}
+.clip
+{
+    position: absolute;
+    right: 80px;
+    bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.clip .clipBox
+{
+    position: relative;
+    width: 340px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #e83c80;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clip .clipBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clip .clipBox ion-icon
+{
+    color: #fff;
+    font-size: 3em;
+}
+.clip .clipBox ion-icon:hover
+{
+    color: #333;
+    filter: drop-shadow(0 0 1px #efff) drop-shadow(0 0 2px #efff) drop-shadow(0 0 5px #efff);
+}
